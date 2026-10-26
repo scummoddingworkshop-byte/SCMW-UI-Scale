@@ -1,0 +1,10 @@
+# Keep the Lua source LF so it behaves the same everywhere.
+# Windows scripts and player text files use CRLF.
+* text=auto
+*.lua text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.txt text eol=crlf
+*.jpg binary
+*.png binary
+*.zip binary

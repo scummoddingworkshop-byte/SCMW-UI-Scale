@@ -1,0 +1,8 @@
+# Build output
+dist/
+
+# Local editor and OS files
+.vs/
+*.user
+Thumbs.db
+Desktop.ini

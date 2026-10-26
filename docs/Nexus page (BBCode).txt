@@ -1,0 +1,162 @@
+[b][size=6]SCMW — UI Scale[/size][/b]
+
+[b]Make SCUM's interface smaller or bigger while you play — in 10-point steps — and keep the size you like between sessions.[/b]
+
+This uses the game's own layout scale, so mouse clicks and highlights stay on the control you aimed at. It is not a picture-only zoom.
+
+[quote][b]Important:[/b] this is a UE4SS mod. It needs BattlEye off, so it works in single-player and on private servers only — not on official servers.[/quote]
+
+[hr]
+
+[b][size=5]What it does[/size][/b]
+
+SCUM's interface is fixed at a size that is too large for many PC screens. This mod adds a simple, adjustable UI scale:
+
+[list]
+[*][b]Ctrl + -[/b] — 10 points smaller
+[*][b]Ctrl + +[/b] — 10 points bigger (Ctrl + Shift + + on some keyboards)
+[*][b]Ctrl + 0[/b] — back to 100%
+[/list]
+
+The number-pad [b]-[/b] and [b]+[/b] keys work too. The scale goes from [b]40%[/b] to [b]150%[/b].
+
+It affects the inventory, crafting, HUD and the main menus.
+
+The chosen size is [b]saved automatically[/b] and used again the next time you start the game.
+
+No game files are edited. Remove the mod and the interface returns to normal.
+
+[hr]
+
+[b][size=5]Screenshots[/size][/b]
+
+The [b]Images[/b] tab shows the inventory at [b]100%[/b], [b]80%[/b] and [b]60%[/b], plus the crafting menu at [b]60%[/b].
+
+[hr]
+
+[b][size=5]Requirements[/size][/b]
+
+[list]
+[*][b]UE4SS[/b] installed in [code]SCUM\Binaries\Win64[/code]
+[*]SCUM launched with [b]-nobattleye -fileopenlog[/b]
+[*]A recent [b]UE4SS 3.x[/b] build (tested with [b]3.0.1[/b])
+[*]Single-player or private servers only
+[/list]
+
+UE4SS is a separate project and is [b]not[/b] included in this download. Install it from the official UE4SS releases first:
+[url=https://github.com/UE4SS-RE/RE-UE4SS/releases]https://github.com/UE4SS-RE/RE-UE4SS/releases[/url]
+
+[hr]
+
+[b][size=5]Installation[/size][/b]
+
+[list=1]
+[*]Install [b]UE4SS[/b] and check that it loads.
+[*]Extract this mod's zip into:
+[code]SCUM\Binaries\Win64[/code]
+The zip already contains the correct [code]ue4ss\Mods\SCMW_UIScale[/code] folders.
+[*]Open:
+[code]SCUM\Binaries\Win64\ue4ss\Mods\mods.txt[/code]
+Add this line:
+[code]SCMW_UIScale : 1[/code]
+[*]Launch SCUM from a shortcut that uses:
+[code]-nobattleye -fileopenlog[/code]
+Steam's normal [b]Play[/b] button does not load UE4SS.
+[*]Open the inventory and use the keys above.
+[/list]
+
+[b]Vortex:[/b] this release is tested with a manual install. If Vortex handles archive installs for SCUM, check that the files land in [code]ue4ss\Mods\SCMW_UIScale[/code]; otherwise use the manual steps above.
+
+[hr]
+
+[b][size=5]Saved setting[/size][/b]
+
+Your chosen size is stored here:
+
+[code]%LOCALAPPDATA%\SCUM\Saved\SCMW_UIScale.txt[/code]
+
+It is per Windows user and survives game updates. Delete the file to start at [b]100%[/b] again.
+
+[hr]
+
+[b][size=5]Uninstall[/size][/b]
+
+[list]
+[*]Set [code]SCMW_UIScale : 0[/code] in [code]ue4ss\Mods\mods.txt[/code], [b]or[/b]
+[*]delete the [code]ue4ss\Mods\SCMW_UIScale[/code] folder.
+[/list]
+
+The interface returns to normal on the next launch. Nothing else is changed.
+
+[hr]
+
+[b][size=5]Compatibility[/size][/b]
+
+[list]
+[*][b]Tested on:[/b] SCUM 1.3.4.2 (build 25804202) with UE4SS 3.0.1
+[*][b]Client-side only.[/b] It changes your own interface; it does not change the game world or other players.
+[*][b]Game updates:[/b] UE4SS may need an update after a SCUM patch. If the mod stops loading, update UE4SS first.
+[*][b]Official servers:[/b] not usable, because UE4SS needs BattlEye off.
+[/list]
+
+[hr]
+
+[b][size=5]Troubleshooting[/size][/b]
+
+After launching, open:
+
+[code]SCUM\Binaries\Win64\ue4ss\UE4SS.log[/code]
+
+Look for lines starting with [code][SCMW][/code]. They show:
+
+[list]
+[*]the loaded version,
+[*]the saved scale,
+[*]the applied scale,
+[*]any file or settings error.
+[/list]
+
+If the keys do nothing:
+
+[list=1]
+[*]Check that UE4SS loaded at all.
+[*]Check that SCUM was started with [b]-nobattleye -fileopenlog[/b].
+[*]Check that [code]SCMW_UIScale : 1[/code] is in [code]mods.txt[/code].
+[/list]
+
+[hr]
+
+[b][size=5]Source and licence[/size][/b]
+
+The source is available on GitHub:
+[url=https://github.com/scummoddingworkshop-byte/SCMW-UI-Scale]https://github.com/scummoddingworkshop-byte/SCMW-UI-Scale[/url]
+
+The project is licensed under the [b]MIT License[/b]: you may use, modify and redistribute it, including commercially, as long as the copyright notice and the licence text are kept.
+
+[b]Attribution is the only requirement.[/b] Please link back to this page instead of reuploading the compiled zip unchanged.
+
+[hr]
+
+[b][size=5]Credits[/size][/b]
+
+[list]
+[*][b]Fran (SCMW)[/b] — project owner and testing
+[*][b]UE4SS[/b] — the Lua mod loader
+[*][b]SCUM[/b] — Gamepires / Jagex
+[/list]
+
+[hr]
+
+[b][size=5]Changelog[/size][/b]
+
+[b]1.0.0 — 26 October 2026[/b]
+
+[list]
+[*]First release.
+[*]Adjustable UI scale with [b]Ctrl + - / Ctrl + +[/b], in 10-point steps.
+[*][b]Ctrl + 0[/b] resets to 100%.
+[*]Number-pad keys supported.
+[*]The chosen size is saved between sessions.
+[*]Works in the inventory, crafting, HUD and main menus.
+[*]No game files are edited.
+[/list]
